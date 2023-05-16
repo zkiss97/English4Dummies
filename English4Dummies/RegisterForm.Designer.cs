@@ -34,6 +34,7 @@
             this.labelLogin = new System.Windows.Forms.Label();
             this.textBoxPassAgain = new System.Windows.Forms.TextBox();
             this.labelPassAgain = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkBoxShowPassword
@@ -45,6 +46,7 @@
             this.checkBoxShowPassword.TabIndex = 17;
             this.checkBoxShowPassword.Text = "Jelszó megjelenítése";
             this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
             // labelYesAcc
             // 
@@ -63,6 +65,7 @@
             this.buttonToLogin.TabIndex = 15;
             this.buttonToLogin.Text = "Jelentkezz be";
             this.buttonToLogin.UseVisualStyleBackColor = true;
+            this.buttonToLogin.Click += new System.EventHandler(this.buttonToLogin_Click);
             // 
             // labelTitle
             // 
@@ -82,6 +85,7 @@
             this.buttonRegister.TabIndex = 13;
             this.buttonRegister.Text = "Regisztráció";
             this.buttonRegister.UseVisualStyleBackColor = true;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
             // textBoxPassword
             // 
@@ -89,6 +93,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(145, 20);
             this.textBoxPassword.TabIndex = 12;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // textBoxLogin
             // 
@@ -96,6 +101,7 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(145, 20);
             this.textBoxLogin.TabIndex = 11;
+            this.textBoxLogin.Enter += new System.EventHandler(this.textBoxLogin_Enter);
             // 
             // label2
             // 
@@ -121,6 +127,8 @@
             this.textBoxPassAgain.Name = "textBoxPassAgain";
             this.textBoxPassAgain.Size = new System.Drawing.Size(145, 20);
             this.textBoxPassAgain.TabIndex = 19;
+            this.textBoxPassAgain.UseSystemPasswordChar = true;
+            this.textBoxPassAgain.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxPassAgain_Validating);
             // 
             // labelPassAgain
             // 
@@ -131,11 +139,22 @@
             this.labelPassAgain.TabIndex = 18;
             this.labelPassAgain.Text = "Jelszó ismét";
             // 
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(12, 463);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 20;
+            this.buttonExit.Text = "Bezárás";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.button1_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 498);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.textBoxPassAgain);
             this.Controls.Add(this.labelPassAgain);
             this.Controls.Add(this.checkBoxShowPassword);
@@ -167,5 +186,6 @@
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.TextBox textBoxPassAgain;
         private System.Windows.Forms.Label labelPassAgain;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

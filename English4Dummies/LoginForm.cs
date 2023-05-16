@@ -10,37 +10,16 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace English4Dummies {
-    public partial class FormLoginPage : Form {
+    public partial class LoginForm : Form {
 
-        public static MySqlConnection connMaster = new MySqlConnection();
 
-        static string server = "127.0.0.1";
-        static string database = "englishfordummies3";
-        static string id = "root";
-        static string password = "";
-
-        public static MySqlConnection dataSource() {
-            connMaster = new MySqlConnection($"server={server} database={database} id={id} password{password}");
-            return connMaster;
-        }
-
-        public void connOpen() {
-            dataSource();
-            connMaster.Open();
-        }
-
-        public void connClose() {
-            dataSource();
-            connMaster.Close();
-        }
-
-        Connection con = new Connection();
-
-        public FormLoginPage() {
+        public LoginForm() {
             InitializeComponent();
             labelDBCSuccess.Visible = false;
             labelDBCError.Visible = false;
         }
+
+        Connection con = new Connection();
 
         private void buttonDBCheck_Click(object sender, EventArgs e) {
 
@@ -51,13 +30,69 @@ namespace English4Dummies {
                 labelDBCError.Visible = false;
                 con.connClose();
             } 
-            catch(Exception) {
+            catch(Exception ex) {
+                string msg;
                 labelDBCError.Visible = true;
                 labelDBCSuccess.Visible= false;
-                //string message = Exception.Message;
-                //labelConnErrorMsg.Text = message;
+                msg = ex.Message;
+                MessageBox.Show(msg);
             
             }
+        }
+
+        private void buttonToRegister_Click(object sender, EventArgs e) {
+            RegisterForm rf = new RegisterForm();
+            rf.Show();
+            Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e) {
+
+            DBConnect DB = new DBConnect();
+
+            string username = textBoxLogin.Text;
+            string password = textBoxPassword.Text;
+
+            DataTable dt = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @login and `password` = @password");
+
+            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = username;
+            command.Parameters.Add("@password", MySqlDbType.VarChar).Value = password;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(dt);
+
+            if (dt.Rows.Count > 0) {
+                MessageBox.Show("YEEES");
+            }
+            else {
+                MessageBox.Show("NOOOO");
+            }
+            
+
+        }
+
+        private void textBoxLogin_Enter(object sender, EventArgs e) {
+
+        }
+
+        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e) {
+            if (checkBoxShowPassword.Checked) {
+                textBoxPassword.UseSystemPasswordChar = false;
+            } 
+            else textBoxPassword.UseSystemPasswordChar = true;
+            
+        }
+
+        private void buttonSkip_Click(object sender, EventArgs e) {
+            FormMainPage fmp = new FormMainPage();
+            fmp.Show();
+            Visible = false;
         }
     }
 }

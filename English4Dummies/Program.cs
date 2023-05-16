@@ -13,7 +13,7 @@ namespace English4Dummies {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLoginPage());
+            Application.Run(new LoginForm());
         }
     }
 }

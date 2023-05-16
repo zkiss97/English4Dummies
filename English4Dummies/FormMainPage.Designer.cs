@@ -23,61 +23,24 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.buttonMainPage = new System.Windows.Forms.Button();
-            this.buttonMaterials = new System.Windows.Forms.Button();
-            this.buttonPractice = new System.Windows.Forms.Button();
-            this.buttonTests = new System.Windows.Forms.Button();
-            this.buttonProfile = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.groupBoxMenu = new System.Windows.Forms.GroupBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelContent = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.főoldalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tananyagokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.igeidőkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gyakorlásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tesztekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.profilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.egyébToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.igeidőkToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.egyébToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.igeidőkToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.egyébToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonMainPage
-            // 
-            this.buttonMainPage.Location = new System.Drawing.Point(301, 12);
-            this.buttonMainPage.Name = "buttonMainPage";
-            this.buttonMainPage.Size = new System.Drawing.Size(82, 23);
-            this.buttonMainPage.TabIndex = 0;
-            this.buttonMainPage.Text = "Főoldal";
-            this.buttonMainPage.UseVisualStyleBackColor = true;
-            // 
-            // buttonMaterials
-            // 
-            this.buttonMaterials.Location = new System.Drawing.Point(382, 12);
-            this.buttonMaterials.Name = "buttonMaterials";
-            this.buttonMaterials.Size = new System.Drawing.Size(82, 23);
-            this.buttonMaterials.TabIndex = 1;
-            this.buttonMaterials.Text = "Tananyagok";
-            this.buttonMaterials.UseVisualStyleBackColor = true;
-            // 
-            // buttonPractice
-            // 
-            this.buttonPractice.Location = new System.Drawing.Point(463, 12);
-            this.buttonPractice.Name = "buttonPractice";
-            this.buttonPractice.Size = new System.Drawing.Size(82, 23);
-            this.buttonPractice.TabIndex = 2;
-            this.buttonPractice.Text = "Gyakorlás";
-            this.buttonPractice.UseVisualStyleBackColor = true;
-            // 
-            // buttonTests
-            // 
-            this.buttonTests.Location = new System.Drawing.Point(544, 12);
-            this.buttonTests.Name = "buttonTests";
-            this.buttonTests.Size = new System.Drawing.Size(82, 23);
-            this.buttonTests.TabIndex = 3;
-            this.buttonTests.Text = "Tesztek";
-            this.buttonTests.UseVisualStyleBackColor = true;
-            // 
-            // buttonProfile
-            // 
-            this.buttonProfile.Location = new System.Drawing.Point(625, 12);
-            this.buttonProfile.Name = "buttonProfile";
-            this.buttonProfile.Size = new System.Drawing.Size(82, 23);
-            this.buttonProfile.TabIndex = 4;
-            this.buttonProfile.Text = "Profil";
-            this.buttonProfile.UseVisualStyleBackColor = true;
             // 
             // buttonLogout
             // 
@@ -87,6 +50,7 @@
             this.buttonLogout.TabIndex = 5;
             this.buttonLogout.Text = "Kijelentkezés";
             this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // groupBoxMenu
             // 
@@ -111,9 +75,106 @@
             this.labelContent.AutoSize = true;
             this.labelContent.Location = new System.Drawing.Point(279, 168);
             this.labelContent.Name = "labelContent";
-            this.labelContent.Size = new System.Drawing.Size(35, 13);
+            this.labelContent.Size = new System.Drawing.Size(424, 52);
             this.labelContent.TabIndex = 1;
-            this.labelContent.Text = "Itt megtanulhatod az angol igeidőket. Kezdjünk is neki!\nWork in progress!";
+            this.labelContent.Text = "Itt megtanulhatsz angolul.\nElső sorban nyelvtan, de a későbbiekben szókincs gyara" +
+    "pító gyakorlatok is kerülnek be.\nKezdjünk is neki!\nWork in progress!";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.főoldalToolStripMenuItem,
+            this.tananyagokToolStripMenuItem,
+            this.gyakorlásToolStripMenuItem,
+            this.tesztekToolStripMenuItem,
+            this.profilToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // főoldalToolStripMenuItem
+            // 
+            this.főoldalToolStripMenuItem.Name = "főoldalToolStripMenuItem";
+            this.főoldalToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.főoldalToolStripMenuItem.Text = "Főoldal";
+            // 
+            // tananyagokToolStripMenuItem
+            // 
+            this.tananyagokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.igeidőkToolStripMenuItem,
+            this.egyébToolStripMenuItem});
+            this.tananyagokToolStripMenuItem.Name = "tananyagokToolStripMenuItem";
+            this.tananyagokToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.tananyagokToolStripMenuItem.Text = "Tananyagok";
+            // 
+            // igeidőkToolStripMenuItem
+            // 
+            this.igeidőkToolStripMenuItem.Name = "igeidőkToolStripMenuItem";
+            this.igeidőkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.igeidőkToolStripMenuItem.Text = "Igeidők";
+            this.igeidőkToolStripMenuItem.Click += new System.EventHandler(this.igeidőkToolStripMenuItem_Click);
+            // 
+            // gyakorlásToolStripMenuItem
+            // 
+            this.gyakorlásToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.igeidőkToolStripMenuItem1,
+            this.egyébToolStripMenuItem1});
+            this.gyakorlásToolStripMenuItem.Name = "gyakorlásToolStripMenuItem";
+            this.gyakorlásToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.gyakorlásToolStripMenuItem.Text = "Gyakorlás";
+            // 
+            // tesztekToolStripMenuItem
+            // 
+            this.tesztekToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.igeidőkToolStripMenuItem2,
+            this.egyébToolStripMenuItem2});
+            this.tesztekToolStripMenuItem.Name = "tesztekToolStripMenuItem";
+            this.tesztekToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.tesztekToolStripMenuItem.Text = "Tesztek";
+            // 
+            // profilToolStripMenuItem
+            // 
+            this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
+            this.profilToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.profilToolStripMenuItem.Text = "Profil";
+            this.profilToolStripMenuItem.Click += new System.EventHandler(this.profilToolStripMenuItem_Click);
+            // 
+            // egyébToolStripMenuItem
+            // 
+            this.egyébToolStripMenuItem.Name = "egyébToolStripMenuItem";
+            this.egyébToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.egyébToolStripMenuItem.Text = "Egyéb";
+            this.egyébToolStripMenuItem.Click += new System.EventHandler(this.egyébToolStripMenuItem_Click);
+            // 
+            // igeidőkToolStripMenuItem1
+            // 
+            this.igeidőkToolStripMenuItem1.Name = "igeidőkToolStripMenuItem1";
+            this.igeidőkToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.igeidőkToolStripMenuItem1.Text = "Igeidők";
+            this.igeidőkToolStripMenuItem1.Click += new System.EventHandler(this.igeidőkToolStripMenuItem1_Click);
+            // 
+            // egyébToolStripMenuItem1
+            // 
+            this.egyébToolStripMenuItem1.Name = "egyébToolStripMenuItem1";
+            this.egyébToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.egyébToolStripMenuItem1.Text = "Egyéb";
+            this.egyébToolStripMenuItem1.Click += new System.EventHandler(this.egyébToolStripMenuItem1_Click);
+            // 
+            // igeidőkToolStripMenuItem2
+            // 
+            this.igeidőkToolStripMenuItem2.Name = "igeidőkToolStripMenuItem2";
+            this.igeidőkToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.igeidőkToolStripMenuItem2.Text = "Igeidők";
+            this.igeidőkToolStripMenuItem2.Click += new System.EventHandler(this.igeidőkToolStripMenuItem2_Click);
+            // 
+            // egyébToolStripMenuItem2
+            // 
+            this.egyébToolStripMenuItem2.Name = "egyébToolStripMenuItem2";
+            this.egyébToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.egyébToolStripMenuItem2.Text = "Egyéb";
+            this.egyébToolStripMenuItem2.Click += new System.EventHandler(this.egyébToolStripMenuItem2_Click);
             // 
             // FormMainPage
             // 
@@ -124,13 +185,12 @@
             this.Controls.Add(this.labelContent);
             this.Controls.Add(this.groupBoxMenu);
             this.Controls.Add(this.buttonLogout);
-            this.Controls.Add(this.buttonProfile);
-            this.Controls.Add(this.buttonTests);
-            this.Controls.Add(this.buttonPractice);
-            this.Controls.Add(this.buttonMaterials);
-            this.Controls.Add(this.buttonMainPage);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMainPage";
             this.Text = "E4D - Főoldal";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,15 +198,21 @@
 
 
         #endregion
-
-        private System.Windows.Forms.Button buttonMainPage;
-        private System.Windows.Forms.Button buttonMaterials;
-        private System.Windows.Forms.Button buttonPractice;
-        private System.Windows.Forms.Button buttonTests;
-        private System.Windows.Forms.Button buttonProfile;
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.GroupBox groupBoxMenu;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelContent;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem főoldalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tananyagokToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gyakorlásToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tesztekToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem profilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem igeidőkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem egyébToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem igeidőkToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem egyébToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem igeidőkToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem egyébToolStripMenuItem2;
     }
 }

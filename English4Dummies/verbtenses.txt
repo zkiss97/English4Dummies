@@ -1,0 +1,12 @@
+﻿Present Simple;V1;amikor általánosságban beszélünk valamiről;I live in Budapest. She works as a waitress.
+Present Continuous;is/am/are V+ing;amikor valami olyanról beszélünk, ami éppen most folyamatban van;I am reading a book. He is cooking.
+Present Perfect;have/has + V2;amikor valami a múltban történt, de hatása kihat a jelenre;I have finished my book. John has done his chores.
+Present Perfect Continuous;have/has + been + V-ing;olyan cselekvésre/eseményre vonatkozik, ami a múltban kezdődött, de még most is tart;I have been waiting for 35 minutes at the bar. Maria has been baking a cake since 10am.
+Past Simple;V2;olyan esemény, ami a múlt egy pontján megtörtént;They were here an hour ago. He read the newspaper.
+Past Continuous;was/were + V-ing;olyan folyamat, ami a múltban zajlott le folyamatosan;I was walking my dog. We were taking notes in Math class.
+Past Perfect;had + V3;olyan folyamat, ami a múltban kezdődött, és le is zárult;I have finished my homework. Jane has done this before.
+Past Perfect Continuous;had + been + V-ing;olyan folyamat, ami a múltban történt és hosszabb ideig zajlott;I had been jogging this morning. She had been doing laundry.
+Future Simple;will + V1;olyan cselekvésre/eseményre vonatkozik, ami a jövőben fog bekövetkezni.;I will clean the house. We will watch the movie.
+Future Continuous;will be + V-ing;olyan esemény, ami a jövőben folyamatosan meg fog történni;It will be raining all day tomorrow. She will be learning French.
+Future Perfect;will + have + V2;olyan esemény, ami a jövőben be lesz fejezve;He will have locked the door. She will have studied the rules.
+Future Perfect Continuous;will have been + V-ing;olyan esemény, ami folyamatban van, a jövőben fog befejeződni, de egy bizonyos idő előtt;It will have been raining all day long. She will have been learning French for two weeks.

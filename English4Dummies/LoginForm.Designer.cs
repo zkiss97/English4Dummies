@@ -1,5 +1,5 @@
 ﻿namespace English4Dummies {
-    partial class FormLoginPage {
+    partial class LoginForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -35,7 +35,8 @@
             this.buttonDBCheck = new System.Windows.Forms.Button();
             this.labelDBCSuccess = new System.Windows.Forms.Label();
             this.labelDBCError = new System.Windows.Forms.Label();
-            this.labelConnErrorMsg = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonSkip = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelLogin
@@ -62,6 +63,7 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(145, 20);
             this.textBoxLogin.TabIndex = 2;
+            this.textBoxLogin.Enter += new System.EventHandler(this.textBoxLogin_Enter);
             // 
             // textBoxPassword
             // 
@@ -69,6 +71,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(145, 20);
             this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // buttonLogin
             // 
@@ -78,6 +81,7 @@
             this.buttonLogin.TabIndex = 4;
             this.buttonLogin.Text = "Bejelentkezés";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // labelTitle
             // 
@@ -97,6 +101,7 @@
             this.buttonToRegister.TabIndex = 6;
             this.buttonToRegister.Text = "Regisztrálj";
             this.buttonToRegister.UseVisualStyleBackColor = true;
+            this.buttonToRegister.Click += new System.EventHandler(this.buttonToRegister_Click);
             // 
             // labelNoAcc
             // 
@@ -116,6 +121,7 @@
             this.checkBoxShowPassword.TabIndex = 8;
             this.checkBoxShowPassword.Text = "Jelszó megjelenítése";
             this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
             // buttonDBCheck
             // 
@@ -145,21 +151,33 @@
             this.labelDBCError.TabIndex = 11;
             this.labelDBCError.Text = "Error";
             // 
-            // labelConnErrorMsg
+            // buttonExit
             // 
-            this.labelConnErrorMsg.AutoSize = true;
-            this.labelConnErrorMsg.Location = new System.Drawing.Point(36, 451);
-            this.labelConnErrorMsg.Name = "labelConnErrorMsg";
-            this.labelConnErrorMsg.Size = new System.Drawing.Size(35, 13);
-            this.labelConnErrorMsg.TabIndex = 12;
-            this.labelConnErrorMsg.Text = "label1";
+            this.buttonExit.Location = new System.Drawing.Point(12, 463);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 13;
+            this.buttonExit.Text = "Bezárás";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // FormLoginPage
+            // buttonSkip
+            // 
+            this.buttonSkip.Location = new System.Drawing.Point(282, 276);
+            this.buttonSkip.Name = "buttonSkip";
+            this.buttonSkip.Size = new System.Drawing.Size(75, 23);
+            this.buttonSkip.TabIndex = 14;
+            this.buttonSkip.Text = "Skip";
+            this.buttonSkip.UseVisualStyleBackColor = true;
+            this.buttonSkip.Click += new System.EventHandler(this.buttonSkip_Click);
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 498);
-            this.Controls.Add(this.labelConnErrorMsg);
+            this.Controls.Add(this.buttonSkip);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelDBCError);
             this.Controls.Add(this.labelDBCSuccess);
             this.Controls.Add(this.buttonDBCheck);
@@ -172,7 +190,7 @@
             this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelLogin);
-            this.Name = "FormLoginPage";
+            this.Name = "LoginForm";
             this.Text = "E4D - Bejelentkezés";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,7 +211,8 @@
         private System.Windows.Forms.Button buttonDBCheck;
         private System.Windows.Forms.Label labelDBCSuccess;
         private System.Windows.Forms.Label labelDBCError;
-        private System.Windows.Forms.Label labelConnErrorMsg;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonSkip;
     }
 }
 
